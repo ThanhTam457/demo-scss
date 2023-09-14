@@ -10,7 +10,7 @@ export default function Home() {
           </figure>
           <div className="article__item__wrapper__body">
             <h2 className="article__item__wrapper__body__title">This is some title</h2>
-            <p className='article__item__wrapper__body__content'>
+            <p className='article__item__wrapper__body__paragraph'>
               Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
             </p>
             <a href="#" className="article__item__wrapper__body__link">

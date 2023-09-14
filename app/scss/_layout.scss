@@ -37,31 +37,35 @@ body {
   .article__item {
     container: card/inline-size;
   }
-  .article__item__wrapper__body__content {
+  .article__item__wrapper__body__paragraph {
     display: none;
   }
 }
 
-// @container card (min-width: 380px) {
-//   .article__wrapper {
-//     display: grid;
-//     grid-template-columns: 100px 1fr;
-//     gap: 16px;
-//   }
-//   .article__body {
-//     padding-left: 0;
-//   }
-//   figure {
-//     width: 100%;
-//     height: 100%;
-//     overflow: hidden;
-//   }
-//   figure img {
-//     height: 100%;
-//     aspect-ratio: 1;
-//     object-fit: cover;
-//   }
-// }
+@media (max-width: 380px) {
+  .article__item__wrapper {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 100px 1fr;
+    
+
+    &__body {
+     padding-left: 0;
+    }
+
+    &__figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    &__image {
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+}
 
 .article__item__wrapper__body__link__span:not(:focus):not(:active) {
   clip: rect(0 0 0 0); 
