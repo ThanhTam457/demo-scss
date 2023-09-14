@@ -1,0 +1,74 @@
+// include css for layout: header, footer,...
+@use 'base';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 48px 0;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  background-image: linear-gradient(45deg, base.$green-mint, base.$blue-indigo);
+  min-height: 100vh;
+}
+
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.article__item__wrapper {
+    &__body {
+        padding: 24px;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+  .article__item {
+    container: card/inline-size;
+  }
+  .article__item__wrapper__body__content {
+    display: none;
+  }
+}
+
+// @container card (min-width: 380px) {
+//   .article__wrapper {
+//     display: grid;
+//     grid-template-columns: 100px 1fr;
+//     gap: 16px;
+//   }
+//   .article__body {
+//     padding-left: 0;
+//   }
+//   figure {
+//     width: 100%;
+//     height: 100%;
+//     overflow: hidden;
+//   }
+//   figure img {
+//     height: 100%;
+//     aspect-ratio: 1;
+//     object-fit: cover;
+//   }
+// }
+
+.article__item__wrapper__body__link__span:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
